@@ -1,5 +1,4 @@
 from . import ffi, librtmp
-from .utils import add_signal_handler
 
 __all__ = ["set_log_level", "get_log_level",
            "set_log_output", "add_log_callback", "remove_log_callback",
@@ -61,7 +60,6 @@ def _log_callback(level, msg):
     if hasattr(_log_output, "write") and level <= _log_level:
         _log_output.write(msg + "\n")
 
+
 librtmp.python_log_callback = _log_callback
 librtmp.RTMP_LogSetCallback(librtmp.c_log_callback)
-
-add_signal_handler()
