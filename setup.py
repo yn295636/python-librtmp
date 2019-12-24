@@ -13,12 +13,12 @@ history = open("HISTORY.rst").read().replace(".. :changelog:", "")
 
 setup(
     name="python-librtmp",
-    version="0.3.0",
+    version="0.3.0r",
     description="Python bindings for librtmp, built with cffi",
     long_description=readme + "\n\n" + history,
     author="Christopher Rosell",
     author_email="chrippa@tanuki.se",
-    url="https://github.com/chrippa/python-librtmp",
+    url="https://github.com/yn295636/python-librtmp",
     license="Simplified BSD",
     packages=["librtmp"],
     cffi_modules=["librtmp/ffi.py:ffi"],
@@ -37,5 +37,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
     ]
 )
